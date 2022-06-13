@@ -1,0 +1,72 @@
+.center-header {
+    &__row {
+        display: flex;
+        column-gap: 94px;
+    }
+    &__left {
+        flex: 0 1 685px;
+        max-width: 685px;
+    }
+}
+
+.center-actions {
+    display: flex;
+    &__link {
+        position: relative;
+        display: inline-block;
+        font-weight: 500;
+        font-size: 18px;
+        color: var(--main-color);
+        &:not(:last-child) {
+            margin-right: 74px;
+        }
+        &--sm {
+            font-size: 14px;
+            text-align: center;
+        }
+        &--whatsapp {
+            margin-top: -2px;
+            padding-left: 37px;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: -1px;
+                width: 24px;
+                height: 24px;
+                background: url("../img/whatsapp.png") center no-repeat;
+                background-size: cover;
+            }
+        }
+        &--convert {
+            display: inline-flex;
+            padding-top: 5px;
+        }
+        &--last {
+            font-family: var(--second-font);
+            display: flex;
+        }
+    }
+    &__link-wrapper {
+        font-family: var(--second-font);
+        font-size: 16px;
+        margin-top: -10px;
+        span {
+            display: block;
+            line-height: 30px;
+            font-size: 20px;
+        }
+    }
+    &__icon {
+        margin-top: 1px;
+        margin-right: 9px;
+        width: 24px;
+        height: 18px;
+        fill: var(--accent-color);
+        &--location {
+            width: 20px;
+            height: 27px;
+            margin-right: 8px;
+        }
+    }
+}

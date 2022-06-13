@@ -1,0 +1,47 @@
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 74px;
+    &__text {
+        margin: 0;
+        max-width: 403px;
+        flex: 0 1 403px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    &__phone {
+        position: relative;
+        font-family: var(--second-font);
+        display: inline-flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+        color: var(--main-color);
+        margin-right: 19px;
+        padding-left: 40px;
+        &::before {
+            content: "";
+            width: 30px;
+            height: 30px;
+            display: block;
+            position: absolute;
+            left: -1px;
+            top: 3px;
+            background: url("../img/svg/phone.svg") center no-repeat / cover;
+        }
+    }
+    &__button {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 30px;
+        background: var(--accent-color);
+        color: var(--light-color);
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        min-height: 37px;
+        text-transform: uppercase;
+        transform: translateY(-6px);
+    }
+}

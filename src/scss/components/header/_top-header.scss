@@ -1,0 +1,14 @@
+.top-header {
+    &__row {
+        display: flex;
+    }
+    &__left {
+        margin-right: 30px;
+    }
+    &__right {
+        padding-top: 18px;
+    }
+    &__nav {
+        margin-bottom: 28px;
+    }
+}

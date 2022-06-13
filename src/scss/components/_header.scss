@@ -1,0 +1,10 @@
+.header {
+    &__center {
+        margin-top: -6px;
+    }
+}
+
+@import "header/top-header";
+@import "header/header-info";
+@import "header/center-header";
+@import "header/header-search";
