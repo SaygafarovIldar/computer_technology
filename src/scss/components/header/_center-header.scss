@@ -35,7 +35,8 @@
             text-align: center;
         }
         &--whatsapp {
-            @include adaptive-value('padding-left', 37, 15);
+            padding-left: 37px;
+            @include adaptive-value('padding-left', 37, 25);
             &::before {
                 content: "";
                 position: absolute;

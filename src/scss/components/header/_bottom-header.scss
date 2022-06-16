@@ -13,11 +13,31 @@
     padding: 17px 0;
     &__list {
         display: flex;
-        gap: 117px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width: 993px) {
+            text-align: center;
+            row-gap: 20px;
+            // gap: 20px;
+        }
+        // column-gap: 20px;
+
+        // @include adaptive-value("gap", 117, 30);
+        // gap: 117px;
+    }
+    &__item {
+        @media (max-width: 993px) {
+            max-width: 50%;
+            flex: 0 1 50%;
+        }
     }
     &__link {
         font-weight: 500;
-        font-size: 18px;
+        font-size: 14px;
+        @media (min-width: 1130px) {
+            font-size: 18px;
+        }
+        // @include adaptive-value("font-size", 18, 14);
         line-height: 21px;
         text-transform: uppercase;
         color: var(--main-color);
