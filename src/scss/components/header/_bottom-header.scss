@@ -1,0 +1,28 @@
+.dashed-links {
+    a {
+        padding-bottom: 8px;
+        border-bottom: 1px dashed var(--dark-color);
+    }
+}
+
+.bottom-header {
+    background-color: var(--main-bg);
+}
+
+.bottom-nav {
+    padding: 17px 0;
+    &__list {
+        display: flex;
+        gap: 117px;
+    }
+    &__link {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: var(--main-color);
+    }
+    a {
+        padding-bottom: 4px;
+    }
+}

@@ -1,6 +1,9 @@
 .header {
+    &__top {
+        margin-bottom: 23px;
+    }
     &__center {
-        margin-top: -6px;
+        margin-bottom: 27px;
     }
 }
 
@@ -8,3 +11,4 @@
 @import "header/header-info";
 @import "header/center-header";
 @import "header/header-search";
+@import "header/bottom-header";

@@ -1,17 +1,13 @@
+@import "./mixins/adaptive-value";
 .nav {
     &__list {
         display: flex;
+        justify-content: space-between;
     }
-    &__item {
-        &:not(:last-child) {
-            margin-right: 43px;
-        }
-    }
+    &__item {}
     &__link {
-        padding-bottom: 8px;
-        border-bottom: 1px dashed var(--dark-color);
         font-weight: 500;
-        font-size: 20px;
+        @include adaptive-value("font-size", 20, 14);
         line-height: 24px;
         color: var(--main-color);
     }

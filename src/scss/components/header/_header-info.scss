@@ -1,47 +1,68 @@
 .header-info {
     display: flex;
-    align-items: center;
-    gap: 74px;
+    align-items: flex-start;
+    justify-content: space-between;
+    grid-column: 4/-1;
+    @media (max-width: 993px) {
+        grid-row: 1;
+    }
+    &__actions {
+        text-align: right;
+        @media (min-width: 993px) {
+            display: flex;
+            align-items: center;
+        }
+    }
     &__text {
         margin: 0;
-        max-width: 403px;
-        flex: 0 1 403px;
-        font-size: 18px;
+        width: 100%;
+        @include adaptive-value('max-width', 403, 200);
+        @include adaptive-value('font-size', 18, 12);
         line-height: 21px;
     }
     &__phone {
         position: relative;
+        display: inline-block;
         font-family: var(--second-font);
-        display: inline-flex;
-        align-items: center;
         font-weight: 700;
-        font-size: 30px;
+        @include adaptive-value('font-size', 30, 16);
         line-height: 37px;
         color: var(--main-color);
-        margin-right: 19px;
-        padding-left: 40px;
+        @media (min-width: 993px) {
+            @include adaptive-value('margin-right', 19, 10);
+        }
+        @media (max-width: 993px) {
+            margin-bottom: 5px;
+        }
+        @include adaptive-value('padding-left', 40, 20);
         &::before {
             content: "";
             width: 30px;
             height: 30px;
-            display: block;
             position: absolute;
             left: -1px;
             top: 3px;
-            background: url("../img/svg/phone.svg") center no-repeat / cover;
+            background: url("../img/svg/phone.svg") center no-repeat;
+            background-size: cover;
         }
     }
     &__button {
         cursor: pointer;
         display: inline-block;
-        padding: 0 30px;
+        @include adaptive-value('padding-left',
+        30,
+        15);
+        @include adaptive-value('padding-right',
+        30,
+        15);
         background: var(--accent-color);
         color: var(--light-color);
         font-weight: 700;
-        font-size: 18px;
+        @include adaptive-value('font-size',
+        18,
+        14);
         line-height: 21px;
         min-height: 37px;
         text-transform: uppercase;
-        transform: translateY(-6px);
     }
 }

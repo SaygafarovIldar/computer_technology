@@ -1,14 +1,23 @@
 .top-header {
     &__row {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 80px;
+        @media (max-width: 993px) {
+            padding-top: 10px;
+            align-items: center;
+        }
     }
     &__left {
-        margin-right: 30px;
-    }
-    &__right {
-        padding-top: 18px;
+        padding-right: 20px;
+        grid-column: 3 span;
     }
     &__nav {
-        margin-bottom: 28px;
+        grid-column: 9 span;
+        padding-top: 15px;
+        @media (max-width: 993px) {
+            grid-column: 12 span;
+            padding-top: 0;
+        }
     }
 }

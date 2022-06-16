@@ -1,6 +1,6 @@
 .header-search {
     &__label {
-        display: flex;
+        display: block;
         position: relative;
     }
     &__icon {
@@ -14,10 +14,10 @@
         min-height: 40px;
         width: 100%;
         padding-top: 0;
-        padding-left: 26px;
+        @include adaptive-value('padding-left', 26, 0);
         &::placeholder {
             font-size: 14px;
-            line-height: 21;
+            line-height: 21px;
             color: var(--main-color);
         }
     }
