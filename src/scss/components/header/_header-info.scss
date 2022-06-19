@@ -19,6 +19,9 @@
         @include adaptive-value('max-width', 403, 200);
         @include adaptive-value('font-size', 18, 12);
         line-height: 21px;
+        @media (max-width: 769px) {
+            display: none;
+        }
     }
     &__phone {
         position: relative;

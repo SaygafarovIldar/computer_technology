@@ -7,6 +7,10 @@
     }
 }
 
+.burger {
+    @include burger;
+}
+
 @import "header/top-header";
 @import "header/header-info";
 @import "header/center-header";
