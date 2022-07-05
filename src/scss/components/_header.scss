@@ -5,9 +5,17 @@
     &__center {
         margin-bottom: 27px;
     }
+    &__logo {
+        @media (max-width: 540px) {
+            margin-bottom: 16px;
+        }
+    }
 }
 
 .burger {
+    @media (min-width: 769px) {
+        display: none;
+    }
     @include burger;
 }
 
